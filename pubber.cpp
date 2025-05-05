@@ -5,9 +5,11 @@ int main() {
     const std::string CLIENT_ID = "simple_publisher";
     const std::string TOPIC = "test/topic";
 
+    const char* msg = "Hello from C++ mofo";
+
     mqtt::client client(SERVER_ADDRESS, CLIENT_ID);
     client.connect();
-    client.publish(TOPIC, "Hello from C++ mofo", 256, 0, false);
+    client.publish(TOPIC, msg, strlen(msg), 0, false);
     client.disconnect();
     
     return 0;
