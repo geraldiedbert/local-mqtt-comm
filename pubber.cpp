@@ -7,7 +7,7 @@ int main() {
 
     mqtt::client client(SERVER_ADDRESS, CLIENT_ID);
     client.connect();
-    client.publish(TOPIC, "Hello from C++ bitch", 256, 0, false);
+    client.publish(TOPIC, "Hello from C++ mofo", 256, 0, false);
     client.disconnect();
     
     return 0;
